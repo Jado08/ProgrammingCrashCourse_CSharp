@@ -10,6 +10,19 @@ namespace ProgrammingCrashCourse_CSharp
     {
         static void Main(string[] args)
         {
+            //ProgrammingCrashCourse.Helloworld();
+            //ProgrammingCrashCourse.DataTypes();
+            //ProgrammingCrashCourse.BasicIO();
+            //ProgrammingCrashCourse.Arithmetic();
+            //ProgrammingCrashCourse.ConditionalStatements();
+
+            //ProgrammingCrashCourse.Switch();
+            //ProgrammingCrashCourse.WhileLoop();
+            //ProgrammingCrashCourse.DoWhileLoop();
+            //ProgrammingCrashCourse.ForLoop();
+
+            //ProgrammingTutorials.ForEachLoop();
+            ProgrammingTutorials.Arrays();
         }
     }
 }
