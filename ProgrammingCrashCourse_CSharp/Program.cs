@@ -32,6 +32,8 @@ namespace ProgrammingCrashCourse_CSharp
                 Console.WriteLine("14. Object Methods");
                 Console.WriteLine("15. Inheritance");
                 Console.WriteLine("16. Encapsulation");
+                Console.WriteLine("17. Polymorphism");
+                Console.WriteLine("18. Abstraction");
 
                 Console.Write("\nYour Option No. ");
 
@@ -110,6 +112,18 @@ namespace ProgrammingCrashCourse_CSharp
                     break;
                 case 16:
                     UserEncapsulation user = new UserEncapsulation(99, "julie123", "Julie", "Orcine" );
+                    break;
+                case 17:
+                    Appliances tv = new Television();
+                    Appliances r = new Refrigerator();
+                    tv.kuryente();
+                    r.kuryente();
+                    break;
+                case 18:
+                    Thing np = new Notepad("Notepad");
+                    Thing tble = new Table("Table");
+                    np.willUse();
+                    tble.willUse();
                     break;
 
                 default: Console.WriteLine("Invalid Choice"); break;
