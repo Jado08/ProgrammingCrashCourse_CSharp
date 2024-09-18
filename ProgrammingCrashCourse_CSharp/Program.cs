@@ -29,6 +29,9 @@ namespace ProgrammingCrashCourse_CSharp
                 Console.WriteLine("11. Arrays");
                 Console.WriteLine("12. Classes & Objects");
                 Console.WriteLine("13. Constructors");
+                Console.WriteLine("14. Object Methods");
+                Console.WriteLine("15. Inheritance");
+                Console.WriteLine("16. Encapsulation");
 
                 Console.Write("\nYour Option No. ");
 
@@ -89,9 +92,24 @@ namespace ProgrammingCrashCourse_CSharp
                     string m = Console.ReadLine();
 
                     User u = new User(fn, ln, m);
+                    break;
+                case 14:                   
+                    Student s = new Student("Julie", "Orcine", "BSIT", "4th", "TEC 302", 95.15f, 96.19f);
+                    s.introduceSelf();
+                    s.evaluateGrade();
+                    break;
+                case 15:
+                    Person p = new Person("Julie", "Female", 21);
+                    p.introduceSelf();
 
+                    Toddler t = new Toddler("Daniel", "Male", 2, "Robot");
+                    t.introduceSelf();
 
-
+                    Child c = new Child("Jeneth", "Female", 10, "Doll", "Math");
+                    c.introduceSelf();
+                    break;
+                case 16:
+                    UserEncapsulation user = new UserEncapsulation(99, "julie123", "Julie", "Orcine" );
                     break;
 
                 default: Console.WriteLine("Invalid Choice"); break;
