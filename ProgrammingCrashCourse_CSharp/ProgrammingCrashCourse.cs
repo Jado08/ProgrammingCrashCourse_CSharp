@@ -10,7 +10,7 @@ namespace ProgrammingCrashCourse_CSharp
     {
         public static void Helloworld()
         {
-            Console.WriteLine("Hello World");
+            Console.WriteLine("\nHello World");
         }
 
         public static void DataTypes()
@@ -19,7 +19,7 @@ namespace ProgrammingCrashCourse_CSharp
             int age = 24;
             string address = "Catalunan Pequeno";
 
-            Console.WriteLine("I am " + name +
+            Console.WriteLine("\nI am " + name +
                 ". I lived at " + address +
                 ". My age is " + age + ".");
         }
@@ -70,7 +70,7 @@ namespace ProgrammingCrashCourse_CSharp
         {
             float grade1, grade2, grade3, grade4, average;
 
-            Console.Write("English Grade  : ");
+            Console.Write("\nEnglish Grade  : ");
             grade1 = Convert.ToSingle(Console.ReadLine());
 
             Console.Write("Math Grade     : ");
