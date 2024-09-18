@@ -15,7 +15,7 @@ namespace ProgrammingCrashCourse_CSharp
 
             while (!isValid)
             {
-                Console.WriteLine("Choose an option: ");
+                Console.WriteLine("Choose a Topic: ");
                 Console.WriteLine("1. Hello World");
                 Console.WriteLine("2. Variables and Data Types");
                 Console.WriteLine("3. Basic Input and Output");
@@ -28,6 +28,7 @@ namespace ProgrammingCrashCourse_CSharp
                 Console.WriteLine("10. For Each Loop");
                 Console.WriteLine("11. Arrays");
                 Console.WriteLine("12. Classes & Objects");
+                Console.WriteLine("13. Constructors");
 
                 Console.Write("\nYour Option No. ");
 
@@ -77,9 +78,26 @@ namespace ProgrammingCrashCourse_CSharp
                     Console.WriteLine(p3.firstName + " " + p3.lastName + " " +
                         p3.age + " " + p3.sex);
                     break;
+                case 13:
+                    Console.Write("\nYour Firstname     : ");
+                    string fn = Console.ReadLine();
+
+                    Console.Write("Your Lastname      : ");
+                    string ln = Console.ReadLine();
+
+                    Console.Write("Your Motto in Life : ");
+                    string m = Console.ReadLine();
+
+                    User u = new User(fn, ln, m);
+
+
+
+                    break;
 
                 default: Console.WriteLine("Invalid Choice"); break;
             }
+            Console.WriteLine("\nPress any key to exit...");
+            Console.ReadKey();
         }
     }
 }
