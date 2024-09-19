@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProgrammingCrashCourse_CSharp
 {
+    //Classes and Objects : connected to case # 12
     internal class Peeerson
     {
        public string firstName;
@@ -13,6 +14,8 @@ namespace ProgrammingCrashCourse_CSharp
        public int age;
        public char sex;
     }
+
+    //Constructors : connected to case # 13
     class User
     {
         public string firstName;
@@ -30,6 +33,7 @@ namespace ProgrammingCrashCourse_CSharp
         }
     }
 
+    //Topic : Object Methods : connected to case 14
     class Student
     {
         public string firstName, lastName, course, year, section;
@@ -45,7 +49,6 @@ namespace ProgrammingCrashCourse_CSharp
             this.midtermGrade = midtermGrade;
             this.finalGrade = finalGrade;
         }
-
         public void introduceSelf()
         {
             Console.WriteLine("I am " + firstName + " " + lastName + ". My course is " + course +
@@ -69,16 +72,57 @@ namespace ProgrammingCrashCourse_CSharp
         }   
     }
 
-    //ENCAPSULATION 
+    //INHERITANCE : connected to case # 15
+    class Person
+    {
+        public string name { get; set; }
+        public string sex { get; set; }
+        public int age { get; set; }
+        public Person(string name, string sex, int age)
+        {
+            this.name = name;
+            this.sex = sex;
+            this.age = age;
+        }
+        public void introduceSelf()
+        {
+            Console.WriteLine("\nName : " + name + "\nSex : " + sex + "\nAge : " + age);
+        }
+    }
+    class Toddler : Person
+    {
+        public string toy { get; set; }
+        public Toddler(string name, string sex, int age, string toy) : base(name, sex, age)
+        {
+            this.toy = toy;
+        }
+        public void introduceSelf()
+        {
+            base.introduceSelf();
+            Console.WriteLine("Toy : " + toy);
+        }
+    }
+    class Child : Toddler
+    {
+        public string faveSubject { get; set; }
+
+        public Child(string name, string sex, int age, string toy, string faveSubject) : base(name, sex, age, toy)
+        {
+            this.faveSubject = faveSubject;
+        }
+
+        public void introduceSelf()
+        {
+            base.introduceSelf();
+            Console.WriteLine("Fave Subject : " + faveSubject);
+        }
+    }
+
+    //ENCAPSULATION : connected to case # 16 
     class UserEncapsulation
     {
         private int userID;
         private string userName, firstName, lastName;
-
-        public UserEncapsulation()
-        {
-        }
-
         public int UserID
         {
             get { return userID; }
@@ -101,7 +145,6 @@ namespace ProgrammingCrashCourse_CSharp
             get { return lastName; }
             set { lastName = value; }
         }
-
         public UserEncapsulation(int userID, string userName, string firstName, string lastName)
         {
             UserID = userID;
@@ -110,57 +153,4 @@ namespace ProgrammingCrashCourse_CSharp
             LastName = lastName;
         }
     }
-
-    //INHERITANCE
-    class Person
-    {
-        public string name { get; set; }
-        public string sex { get; set; }
-        public int age { get; set; }
-
-        public Person(string name, string sex, int age)
-        {
-            this.name = name;
-            this.sex = sex;
-            this.age = age;
-        }
-
-        public void introduceSelf()
-        {
-            Console.WriteLine("\nName : " + name + "\nSex : " + sex + "\nAge : "+ age);
-        }
-    }
-    class Toddler : Person
-    {
-        public string toy { get; set; }
-        public Toddler(string name, string sex, int age, string toy) : base(name, sex, age)
-        {
-            this.toy = toy;
-        }
-
-        public void introduceSelf()
-        {
-            base.introduceSelf();
-            Console.WriteLine("Toy : " + toy);
-        }
-        
-    }
-    class Child : Toddler
-    {
-        public string faveSubject { get; set; }
-
-        public Child(string name, string sex, int age, string toy, string faveSubject) : base(name, sex, age, toy)
-        {
-            this.faveSubject = faveSubject;
-        }
-
-        public void introduceSelf()
-        {
-            base.introduceSelf();
-            Console.WriteLine("Fave Subject : " + faveSubject);
-        }
-    }
-
-    
-    
 }
