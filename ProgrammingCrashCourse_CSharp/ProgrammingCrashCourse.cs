@@ -8,12 +8,12 @@ namespace ProgrammingCrashCourse_CSharp
 {
     internal class ProgrammingCrashCourse
     {
-        public static void Helloworld()
+        public static void Helloworld() //connected to case # 1
         {
             Console.WriteLine("\nHello World");
         }
 
-        public static void DataTypes()
+        public static void DataTypes() //connected to case # 2
         {
             string name = "Julie-Ann Orcine";
             int age = 24;
@@ -24,7 +24,7 @@ namespace ProgrammingCrashCourse_CSharp
                 ". My age is " + age + ".");
         }
 
-        public static void BasicIO()
+        public static void BasicIO() //connected to case # 3
         {
             string name;
             string location;
@@ -44,7 +44,7 @@ namespace ProgrammingCrashCourse_CSharp
             Console.WriteLine("I study in " + education + ".");
         }
 
-        public static void Arithmetic()
+        public static void Arithmetic() // connected to case # 4
         {
             int english, math, science, computer;
             float average;
@@ -66,7 +66,7 @@ namespace ProgrammingCrashCourse_CSharp
             Console.WriteLine("\nAverage   : " + average);
         }
 
-        public static void ConditionalStatements()
+        public static void ConditionalStatements() //connected to case # 5
         {
             float grade1, grade2, grade3, grade4, average;
 
@@ -110,7 +110,7 @@ namespace ProgrammingCrashCourse_CSharp
             }
         }
 
-        public static void Switch()
+        public static void Switch() //connected to case # 6
         {
             Console.Write("Month: ");
             int month = Convert.ToInt32(Console.ReadLine());
@@ -174,7 +174,7 @@ namespace ProgrammingCrashCourse_CSharp
             }
         }
 
-        public static void WhileLoop()
+        public static void WhileLoop() //connected to case # 7
         {
             string[] names = { "Prince", "Garleth", "Julie", "Daniella", "Abegail", "Juliana" };
             int j = 0;
@@ -188,7 +188,7 @@ namespace ProgrammingCrashCourse_CSharp
             }
         }
 
-        public static void DoWhileLoop()
+        public static void DoWhileLoop() //connected to case # 8
         {
             string[] fruitName = { "apple", "banana", "mango", "orange", "strawberry", "watermelon" };
             int index = 0;
@@ -199,7 +199,7 @@ namespace ProgrammingCrashCourse_CSharp
             Console.WriteLine("Strawberry is in No. {0} of the fruit's list.", ++index);
         }
 
-        public static void ForLoop()
+        public static void ForLoop() //connected to case # 9
         {
             string[] userName = { "david", "julie", "daniel", };
             string[] password = { "david123", "julie123", "daniel123" };

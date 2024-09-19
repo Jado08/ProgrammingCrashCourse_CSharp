@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Appliances.cs" />
+    <Compile Include="MorningRoutine.cs" />
     <Compile Include="Peeerson.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProgrammingCrashCourse.cs" />
