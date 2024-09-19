@@ -110,7 +110,7 @@ namespace ProgrammingCrashCourse_CSharp
             }
         }
 
-        public static void Switch() //connected to case # 6
+        public static void Switch() // connected to case # 6
         {
             Console.Write("Month: ");
             int month = Convert.ToInt32(Console.ReadLine());
