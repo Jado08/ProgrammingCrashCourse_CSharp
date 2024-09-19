@@ -8,7 +8,7 @@ namespace ProgrammingCrashCourse_CSharp
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             int choice = 0; 
             bool isValid = false;
@@ -34,6 +34,11 @@ namespace ProgrammingCrashCourse_CSharp
                 Console.WriteLine("16. Encapsulation");
                 Console.WriteLine("17. Polymorphism");
                 Console.WriteLine("18. Abstraction");
+                Console.WriteLine("19. Exception Handling");
+                Console.WriteLine("20. Collections");
+                Console.WriteLine("21. Delegates and Events");
+                Console.WriteLine("22. Asynchronous Programming");
+                Console.WriteLine("23. Working with Strings");
 
                 Console.Write("\nYour Option No. ");
 
@@ -103,10 +108,8 @@ namespace ProgrammingCrashCourse_CSharp
                 case 15:
                     Person p = new Person("Julie", "Female", 21);
                     p.introduceSelf();
-
                     Toddler t = new Toddler("Daniel", "Male", 2, "Robot");
                     t.introduceSelf();
-
                     Child c = new Child("Jeneth", "Female", 10, "Doll", "Math");
                     c.introduceSelf();
                     break;
@@ -125,6 +128,52 @@ namespace ProgrammingCrashCourse_CSharp
                     np.willUse();
                     tble.willUse();
                     break;
+                case 19: ProgrammingTutorials.ExceptionHandling(); break;
+                case 20:
+                    List<Place> placeList = new List<Place>
+                    {
+                        new Place("Davao del Sur", new string[] {"Davao City", "Mati", "Digos"}),
+                        new Place("Surigao del Sur", new string[] {"Tandag City", "Tago", "Cagwait"})
+                    };
+                    foreach(var place in placeList)
+                    {
+                        Console.WriteLine($"Place   : {place.name}");
+                        Console.WriteLine("Location");
+                        foreach(var location in place.location)
+                        {
+                            Console.WriteLine($"- {location}");
+                        }
+                        Console.WriteLine();
+                    }
+                    break;
+                case 21:
+                    var video = new Video() { Title = "Video 1" };
+                    var videoEncoder = new VideoEncoder();
+                    var mailService = new MailService();
+                    var messageService = new MessageService();
+
+                    videoEncoder.videoEncoded += mailService.onVideoEncoded;
+                    videoEncoder.videoEncoded += messageService.OnVideoEncoded;
+
+                    videoEncoder.Encode(video);
+                    break;
+                case 22:
+                    await MorningRoutine.PrayAsync();
+                    await MorningRoutine.FixedBedAsync();
+                    await MorningRoutine.WashFaceAsync();
+
+                    Task cookEggsTask = MorningRoutine.CookEggAsync();
+                    Task prepareHotChocolateTask = MorningRoutine.PreparedHotChocoAsync();
+
+                    await Task.WhenAll(cookEggsTask, prepareHotChocolateTask);
+
+                    await MorningRoutine.GetEggsAndPlateAsync();
+                    await MorningRoutine.GetUtensilsAsync();
+                    await MorningRoutine.EatBreakfastAsync();
+
+                    Console.WriteLine("Morning routine completed.");
+                    break;
+                case 23: ProgrammingTutorials.WorkingWithString();break;
 
                 default: Console.WriteLine("Invalid Choice"); break;
             }
