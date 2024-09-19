@@ -21,7 +21,7 @@ namespace ProgrammingCrashCourse_CSharp
             Console.WriteLine("Total : " + total);
         }
 
-        public static void Arrays() //connected to case # 11
+        public static void Arrays() // connected to case # 11
         {
             string[] email = { "david@gmail.com", "julie@gmail.com", "daniel@gmail.com", "jeneth@gmail.com" };
             string[] username = { "david", "julie", "daniel", "jeneth" };
@@ -35,7 +35,7 @@ namespace ProgrammingCrashCourse_CSharp
             Console.WriteLine("Password         : " + password[index]);
         }
 
-        //Exception Handling connected to case # 19
+        // Exception Handling connected to case # 19
         public static void ExceptionHandling()
         {
             try
@@ -58,7 +58,7 @@ namespace ProgrammingCrashCourse_CSharp
             }
         }
 
-        //Working With Strings : connected to case # 23
+        // Working With Strings : connected to case # 23
         public static void WorkingWithString()
         {
             string sentence = "Hello World";
